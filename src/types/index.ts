@@ -7,4 +7,5 @@ export interface CommentProps {
   };
   text: string;
   timestamp: number;
+  replies?: CommentProps[];
 }

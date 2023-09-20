@@ -12,7 +12,7 @@
       },
       {
         "id": "2",
-        "parent_id": "1",
+        "parentId": "1",
         "author": {
           "name": "Zmaj Sipovski",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Aismallard_profile_picture.jpg/640px-Aismallard_profile_picture.jpg"
@@ -21,8 +21,8 @@
         "timestamp": 414514860000
       },
       {
-        "id": "2",
-        "parent_id": "1",
+        "id": "3",
+        "parentId": "1",
         "author": {
           "name": "Ines Grah",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Aismallard_profile_picture.jpg/640px-Aismallard_profile_picture.jpg"
@@ -31,7 +31,7 @@
         "timestamp": 414516900000
       },
       {
-        "id": "1",
+        "id": "4",
         "author": {
           "name": "Pero Pipovski",
           "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Aismallard_profile_picture.jpg/640px-Aismallard_profile_picture.jpg"

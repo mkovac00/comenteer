@@ -8,8 +8,17 @@ const CommentSection = () => {
   const [comments, setComments] = useState<CommentProps[]>([]);
 
   const rootComments = comments.filter(
-    (comment) => !comment.hasOwnProperty("parent_id")
+    (comment) => !comment.hasOwnProperty("parentId")
   );
+
+  const getReplies = (commentId: string) => {
+    return comments
+      .filter((comment) => comment.parentId === commentId)
+      .sort(
+        (a, b) =>
+          new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
+      );
+  };
 
   useEffect(() => {
     fetchComments().then((data) => {
@@ -28,6 +37,7 @@ const CommentSection = () => {
             author={rootComment.author}
             text={rootComment.text}
             timestamp={rootComment.timestamp}
+            replies={getReplies(rootComment.id)}
           />
         ))}
       </div>
