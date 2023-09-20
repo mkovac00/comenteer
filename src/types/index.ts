@@ -1,6 +1,6 @@
 export interface CommentProps {
   id: string;
-  parentId: string;
+  parentId?: string;
   author: {
     name: string;
     picture: string;
