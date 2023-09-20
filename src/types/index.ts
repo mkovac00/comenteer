@@ -6,5 +6,5 @@ export interface CommentProps {
     picture: string;
   };
   text: string;
-  timestamp: Date;
+  timestamp: number;
 }
