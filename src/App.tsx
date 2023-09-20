@@ -1,7 +1,13 @@
 import "./App.css";
 
+import Comment from "./components/Comment/Comment";
+
 function App() {
-  return <div>Hello Vite!</div>;
+  return (
+    <div className="App">
+      <Comment />
+    </div>
+  );
 }
 
 export default App;
