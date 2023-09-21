@@ -10,6 +10,8 @@ import { CreateCommentProps } from "../../types";
 const CreateComment = (props: CreateCommentProps) => {
   const [text, setText] = useState("");
 
+  const isSendingEnabled = text.length > 0;
+
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     props.handleSubmit(text, 5);
@@ -21,14 +23,19 @@ const CreateComment = (props: CreateCommentProps) => {
       <div className="create-comment-popup__group">
         <Button type="button" icon={plusIcon} />
         <textarea
-          placeholder="Say something"
+          placeholder="Start a chat.. or don't?"
           value={text}
           onChange={(e) => setText(e.target.value)}
           className="create-comment-popup__input"
         ></textarea>
       </div>
 
-      <Button type="submit" icon={sendIcon} text="Send message" />
+      <Button
+        type="submit"
+        icon={sendIcon}
+        text="Send message"
+        isDisabled={!isSendingEnabled}
+      />
     </form>
   );
 };

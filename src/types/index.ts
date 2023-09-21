@@ -14,6 +14,7 @@ export interface ButtonProps {
   icon?: JSX.Element;
   text?: string;
   type?: "button" | "submit" | "reset" | undefined;
+  isDisabled?: boolean;
 }
 
 export interface CreateCommentProps {

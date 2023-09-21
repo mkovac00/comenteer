@@ -4,7 +4,7 @@ import { IconContext } from "react-icons";
 
 export const plusIcon = (
   <IconContext.Provider
-    value={{ size: "20", style: { backgroundColor: "#023168" } }}
+    value={{ size: "20", style: { backgroundColor: "inherit" } }}
   >
     <AiOutlinePlus />
   </IconContext.Provider>
@@ -12,7 +12,7 @@ export const plusIcon = (
 
 export const sendIcon = (
   <IconContext.Provider
-    value={{ size: "20", style: { backgroundColor: "#023168" } }}
+    value={{ size: "20", style: { backgroundColor: "inherit" } }}
   >
     <PiPaperPlaneTilt />
   </IconContext.Provider>
