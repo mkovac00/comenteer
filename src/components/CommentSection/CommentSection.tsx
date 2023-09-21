@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 
-import { fetchComments } from "../../helpers/helpers";
+import { fetchComments, createComment } from "../../helpers/helpers";
 import { CommentProps } from "../../types";
 import Comment from "../Comment/Comment";
+import CreateComment from "../CreateComment/CreateComment";
 
 const CommentSection = () => {
   const [comments, setComments] = useState<CommentProps[]>([]);
@@ -20,6 +21,13 @@ const CommentSection = () => {
       );
   };
 
+  const addComment = (text: string, parentId: number) => {
+    console.log("Add comment!", text, parentId);
+    createComment(text).then((comment) => {
+      setComments([comment, ...comments]);
+    });
+  };
+
   useEffect(() => {
     fetchComments().then((data) => {
       setComments(data.data.comments);
@@ -27,21 +35,24 @@ const CommentSection = () => {
   }, []);
 
   return (
-    <div className="comment-section-wrapper">
-      <div className="comment-section__comments">
-        {rootComments.map((rootComment) => (
-          <Comment
-            key={rootComment.timestamp}
-            id={rootComment.id}
-            parentId={rootComment.parentId}
-            author={rootComment.author}
-            text={rootComment.text}
-            timestamp={rootComment.timestamp}
-            replies={getReplies(rootComment.id)}
-          />
-        ))}
+    <>
+      <div className="comment-section-wrapper">
+        <div className="comment-section__comments">
+          {rootComments.map((rootComment) => (
+            <Comment
+              key={rootComment.timestamp}
+              id={rootComment.id}
+              parentId={rootComment.parentId}
+              author={rootComment.author}
+              text={rootComment.text}
+              timestamp={rootComment.timestamp}
+              replies={getReplies(rootComment.id)}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+      <CreateComment handleSubmit={addComment} />
+    </>
   );
 };
 

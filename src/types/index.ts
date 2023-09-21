@@ -13,4 +13,9 @@ export interface CommentProps {
 export interface ButtonProps {
   icon?: JSX.Element;
   text?: string;
+  type?: "button" | "submit" | "reset" | undefined;
+}
+
+export interface CreateCommentProps {
+  handleSubmit: (text: string, parentId: number) => void;
 }

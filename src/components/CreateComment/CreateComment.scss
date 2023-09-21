@@ -28,6 +28,7 @@
       font-size: $font-size-regular;
       background-color: inherit;
       padding-left: 12px;
+      resize: none;
 
       &:focus {
         outline: none;

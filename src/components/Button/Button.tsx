@@ -4,7 +4,7 @@ import { ButtonProps } from "../../types";
 
 const Button = (props: ButtonProps) => {
   return (
-    <button className="btn">
+    <button type={props.type} className="btn">
       {props.icon && <div className="btn-icon">{props.icon}</div>}
       {props.text && <p className="btn-text">{props.text}</p>}
     </button>
