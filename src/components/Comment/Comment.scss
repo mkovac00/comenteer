@@ -4,7 +4,7 @@
   .comment-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     max-width: 700px;
 
@@ -24,6 +24,8 @@
     }
 
     .comment-info {
+      min-width: 350px;
+
       .comment-info__main {
         background-color: $white-color;
         border-radius: $border-radius-primary;
