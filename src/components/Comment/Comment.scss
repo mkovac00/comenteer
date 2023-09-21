@@ -34,12 +34,14 @@
         .comment-info__name {
           margin-top: 0;
           font-weight: $font-weight-large;
+          background-color: inherit;
         }
 
         .comment-info__content {
           margin-bottom: 0;
           color: $gray-color;
           font-weight: $font-weight-medium;
+          background-color: inherit;
         }
       }
 

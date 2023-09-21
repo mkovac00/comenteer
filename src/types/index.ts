@@ -9,3 +9,8 @@ export interface CommentProps {
   timestamp: number;
   replies?: CommentProps[];
 }
+
+export interface ButtonProps {
+  icon?: JSX.Element;
+  text?: string;
+}
