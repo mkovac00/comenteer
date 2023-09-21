@@ -1,6 +1,8 @@
 import { CommentProps } from "../../types";
 import "./Comment.scss";
 
+import { formatTime } from "../../helpers/helpers";
+
 const Comment = (props: CommentProps) => {
   return (
     <div className="comment-container">
@@ -21,7 +23,9 @@ const Comment = (props: CommentProps) => {
             <p className="comment-info__content">{props.text}</p>
           </div>
           <div className="comment-info__metadata">
-            <p className="comment-info__timestamp">{props.timestamp}</p>
+            <p className="comment-info__timestamp">
+              {formatTime(props.timestamp)}
+            </p>
             <p className="comment-info__interpunct">&#183;</p>
             <button className="comment-info__reply-btn">Reply</button>
           </div>
