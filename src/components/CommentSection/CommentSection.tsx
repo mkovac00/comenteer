@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./CommentSection.scss";
 
 import { fetchComments, createComment } from "../../helpers/helpers";
 import { CommentProps } from "../../types";
