@@ -7,9 +7,11 @@ import CreateComment from "../CreateComment/CreateComment";
 
 const CommentSection = () => {
   const [comments, setComments] = useState<CommentProps[]>([]);
+  const [activeComment, setActiveComment] = useState<CommentProps | null>();
 
   const rootComments = comments.filter(
-    (comment) => !comment.hasOwnProperty("parentId")
+    (comment) =>
+      !comment.hasOwnProperty("parentId") || comment.parentId === undefined
   );
 
   const getReplies = (commentId: string) => {
@@ -21,11 +23,13 @@ const CommentSection = () => {
       );
   };
 
-  const addComment = (text: string, parentId: number) => {
+  const addComment = (text: string, parentId?: string) => {
     console.log("Add comment!", text, parentId);
-    createComment(text).then((comment) => {
+    createComment(text, parentId).then((comment) => {
       setComments([comment, ...comments]);
     });
+    setActiveComment(null);
+    console.log(comments);
   };
 
   useEffect(() => {
@@ -47,11 +51,14 @@ const CommentSection = () => {
               text={rootComment.text}
               timestamp={rootComment.timestamp}
               replies={getReplies(rootComment.id)}
+              activeComment={activeComment}
+              setActiveComment={setActiveComment}
+              addComment={addComment}
             />
           ))}
         </div>
       </div>
-      <CreateComment handleSubmit={addComment} />
+      <CreateComment handleSubmit={addComment} replyingTo={activeComment} />
     </>
   );
 };

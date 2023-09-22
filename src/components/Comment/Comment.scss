@@ -72,6 +72,10 @@
           color: $secondary-color;
           padding: 0;
           font-size: $font-size-medium;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }

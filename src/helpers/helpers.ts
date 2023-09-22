@@ -4,9 +4,10 @@ export const fetchComments = async () => {
   return commentsJson;
 };
 
-export const createComment = async (text: string) => {
+export const createComment = async (text: string, parentId?: string) => {
   return {
     id: (Math.floor(Math.random() * (10000 - 1)) + 1).toString(),
+    parentId: parentId,
     author: {
       name: "Mario Kovač",
       picture:

@@ -13,9 +13,6 @@ const Comment = (props: CommentProps) => {
             alt="User avatar"
             src={props.author.picture}
           />
-          {/* {props.replies && props.replies?.length > 0 && (
-            <div className="comment-reply-bullet"></div>
-          )} */}
         </div>
         <div className="comment-info">
           <div className="comment-info__main">
@@ -27,7 +24,14 @@ const Comment = (props: CommentProps) => {
               {formatTime(props.timestamp)}
             </p>
             <p className="comment-info__interpunct">&#183;</p>
-            <button className="comment-info__reply-btn">Reply</button>
+            <button
+              onClick={() =>
+                props.setActiveComment && props.setActiveComment(props)
+              }
+              className="comment-info__reply-btn"
+            >
+              Reply
+            </button>
           </div>
         </div>
       </div>
@@ -39,11 +43,14 @@ const Comment = (props: CommentProps) => {
               <Comment
                 key={reply.timestamp}
                 id={reply.id}
-                parentId={reply.parentId}
+                parentId={props.id}
                 author={reply.author}
                 text={reply.text}
                 timestamp={reply.timestamp}
                 replies={[]}
+                activeComment={props.activeComment}
+                setActiveComment={props.setActiveComment}
+                addComment={props.addComment}
               />
             ))}
           </div>

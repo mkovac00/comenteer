@@ -8,6 +8,9 @@ export interface CommentProps {
   text: string;
   timestamp: number;
   replies?: CommentProps[];
+  activeComment?: CommentProps | null;
+  setActiveComment?: (comment: CommentProps) => void;
+  addComment?: (text: string, replyId: string) => void;
 }
 
 export interface ButtonProps {
@@ -18,5 +21,7 @@ export interface ButtonProps {
 }
 
 export interface CreateCommentProps {
-  handleSubmit: (text: string, parentId: number) => void;
+  handleSubmit: (text: string, parentId?: string) => void;
+  replyingTo?: CommentProps | null;
+  activeComment?: CommentProps | null;
 }
