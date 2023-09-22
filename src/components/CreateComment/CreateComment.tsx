@@ -22,12 +22,12 @@ const CreateComment = (props: CreateCommentProps) => {
     <form onSubmit={onSubmit} className="create-comment-popup">
       <div className="create-comment-popup__group">
         <Button type="button" icon={plusIcon} />
-        <textarea
+        <input
           placeholder="Start a chat.. or don't?"
           value={text}
           onChange={(e) => setText(e.target.value)}
           className="create-comment-popup__input"
-        ></textarea>
+        ></input>
       </div>
 
       <Button
