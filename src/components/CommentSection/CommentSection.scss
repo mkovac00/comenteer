@@ -1,4 +1,17 @@
+@import "../../assets/styles/variables";
+
 .comment-section-wrapper {
   padding-left: 5%;
   padding-top: 40px;
+
+  .comment-section__comments {
+    .comment-section__comments-group-by-date {
+      .comment-section__comments-group-by-date__label {
+        font-size: $font-size-small;
+        color: $gray-color;
+        text-align: center;
+        padding: 40px;
+      }
+    }
+  }
 }
