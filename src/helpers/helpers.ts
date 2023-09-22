@@ -49,7 +49,7 @@ export function formatTime(milliseconds: number): string {
   const year = date.getFullYear();
   const month = date.getMonth() + 1; // January is 0
   const day = date.getDate();
-  return `${month}/${day}/${year}`;
+  return `${day}.${month}.${year}.`;
 }
 
 export function groupCommentsByDate(comments: CommentProps[]) {

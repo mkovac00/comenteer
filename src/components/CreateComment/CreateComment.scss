@@ -23,16 +23,18 @@
 
     .create-comment-popup__label {
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       background-color: inherit;
       padding-left: 12px;
       font-size: $font-size-regular;
+      color: $secondary-color;
 
       .create-comment-popup__label-btn {
         background-color: inherit;
-        border: 2px solid $dark-color;
+        border: 2px solid $gray-color;
         border-radius: $border-radius-secondary;
         margin-right: 6px;
+        color: $gray-color;
 
         &:hover {
           cursor: pointer;
