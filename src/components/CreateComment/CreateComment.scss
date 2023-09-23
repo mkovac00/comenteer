@@ -48,6 +48,10 @@
       font-size: $font-size-regular;
       color: $secondary-color;
 
+      @media only screen and (max-width: $mobile-threshold-width) {
+        font-size: $font-size-small;
+      }
+
       .create-comment-popup__label-btn {
         background-color: inherit;
         border: 2px solid $gray-color;
