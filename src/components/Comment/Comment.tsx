@@ -30,7 +30,9 @@ const Comment = (props: CommentProps) => {
               }
               className="comment-info__reply-btn"
             >
-              Reply
+              {props.replies?.length && props.replies.length > 0
+                ? `Reply (${props.replies?.length})`
+                : "Reply"}
             </button>
           </div>
         </div>
