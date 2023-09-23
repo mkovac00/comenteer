@@ -18,6 +18,8 @@ export interface ButtonProps {
   text?: string;
   type?: "button" | "submit" | "reset" | undefined;
   isDisabled?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  style?: string;
 }
 
 export interface CreateCommentProps {

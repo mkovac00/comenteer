@@ -1,13 +1,23 @@
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineClose } from "react-icons/ai";
 import { PiPaperPlaneTilt } from "react-icons/pi";
 import { IconContext } from "react-icons";
 
+import { motion } from "framer-motion";
+
 export const plusIcon = (
-  <IconContext.Provider
-    value={{ size: "20", style: { backgroundColor: "inherit" } }}
+  <motion.div
+    initial={{ scale: 0 }}
+    animate={{ scale: 1, rotate: 90 }}
+    exit={{ scale: 0 }}
+    transition={{ ease: "easeInOut", duration: 0.5 }}
+    style={{ backgroundColor: "inherit", width: "20px", height: "20px" }}
   >
-    <AiOutlinePlus />
-  </IconContext.Provider>
+    <IconContext.Provider
+      value={{ size: "20", style: { backgroundColor: "inherit" } }}
+    >
+      <AiOutlinePlus />
+    </IconContext.Provider>
+  </motion.div>
 );
 
 export const sendIcon = (
@@ -15,5 +25,21 @@ export const sendIcon = (
     value={{ size: "20", style: { backgroundColor: "inherit" } }}
   >
     <PiPaperPlaneTilt />
+  </IconContext.Provider>
+);
+
+export const closeIcon = (
+  <IconContext.Provider
+    value={{ size: "20", style: { backgroundColor: "inherit" } }}
+  >
+    <motion.div
+      initial={{ scale: 0 }}
+      animate={{ scale: 1, rotate: 90 }}
+      exit={{ scale: 0 }}
+      transition={{ ease: "easeInOut", duration: 0.5 }}
+      style={{ backgroundColor: "inherit", width: "20px", height: "20px" }}
+    >
+      <AiOutlineClose />
+    </motion.div>
   </IconContext.Provider>
 );
