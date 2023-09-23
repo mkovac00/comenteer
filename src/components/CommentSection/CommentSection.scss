@@ -4,6 +4,11 @@
   padding-left: 5%;
   padding-top: 40px;
 
+  @media only screen and (max-width: $mobile-threshold-width) {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
   .comment-section__comments {
     .comment-section__comments-group-by-date {
       .comment-section__comments-group-by-date__label {

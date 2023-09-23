@@ -1,18 +1,22 @@
-// FONT RELATED STYLES
+// FONT RELATED VARIABLES
 $font-weight-medium: 500;
 $font-weight-large: 600;
 $font-size-regular: 18px;
 $font-size-medium: 16px;
 $font-size-small: 13px;
 
-// COLOR RELATED STYLES
+// COLOR RELATED VARIABLES
 $primary-color: #eceef1;
 $secondary-color: #023168;
 $gray-color: #82878d;
 $white-color: #ffffff;
 $dark-color: #333333;
 
-// BORDER RELATED STYLES
+// BORDER RELATED VARIABLES
 $border-radius-primary: 8px;
 $border-radius-secondary: 6px;
 $border-color: #d8dee7;
+
+// SCREEN SIZE RELATED VARIABLES
+$mobile-threshold-width: 480px;
+$mobile-threshold-width-lg: 570px;

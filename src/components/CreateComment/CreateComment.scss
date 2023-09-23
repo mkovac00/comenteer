@@ -5,6 +5,11 @@
   bottom: calc(3vh + 6px);
   left: calc(5% + 6px);
   z-index: 10;
+
+  @media only screen and (max-width: $mobile-threshold-width) {
+    bottom: 12px;
+    left: 12px;
+  }
 }
 
 .send-btn {
@@ -24,6 +29,11 @@
   padding: 6px;
   border-radius: $border-radius-primary;
   max-width: 1366px;
+
+  @media only screen and (max-width: $mobile-threshold-width) {
+    bottom: 6px;
+    left: 6px;
+  }
 
   .create-comment-popup__group {
     background-color: inherit;
@@ -60,6 +70,10 @@
       background-color: inherit;
       padding-left: 8px;
 
+      @media only screen and (max-width: $mobile-threshold-width) {
+        font-size: $font-size-small;
+      }
+
       &:focus {
         outline: none;
       }
@@ -74,6 +88,10 @@
     font-size: $font-size-regular;
     background-color: inherit;
     padding-left: 52px;
+
+    @media only screen and (max-width: $mobile-threshold-width) {
+      font-size: $font-size-small;
+    }
 
     &:focus {
       outline: none;

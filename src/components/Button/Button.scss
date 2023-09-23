@@ -30,5 +30,9 @@
   .btn-text {
     margin: 0 0 0 12px;
     background-color: inherit;
+
+    @media only screen and (max-width: $mobile-threshold-width-lg) {
+      display: none;
+    }
   }
 }
