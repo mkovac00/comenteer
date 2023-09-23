@@ -25,6 +25,10 @@ const CreateComment = (props: CreateCommentProps) => {
   ) => {
     event.preventDefault();
 
+    if (text === "") {
+      return;
+    }
+
     if (isReplyingState && isReplyingState != null) {
       console.log(isReplyingState);
       if (
