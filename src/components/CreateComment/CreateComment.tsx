@@ -18,7 +18,11 @@ const CreateComment = (props: CreateCommentProps) => {
 
   const isSendingEnabled = text.length > 0;
 
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = (
+    event:
+      | React.FormEvent<HTMLFormElement>
+      | React.KeyboardEvent<HTMLInputElement>
+  ) => {
     event.preventDefault();
 
     if (isReplyingState && isReplyingState != null) {
@@ -107,6 +111,13 @@ const CreateComment = (props: CreateCommentProps) => {
                   value={text}
                   onChange={(e) => setText(e.target.value)}
                   className="create-comment-popup__input"
+                  autoFocus
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      onSubmit(e);
+                    }
+                  }}
                 ></input>
               </div>
             )}
@@ -116,6 +127,7 @@ const CreateComment = (props: CreateCommentProps) => {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 className="create-comment-popup__input"
+                autoFocus
               ></input>
             )}
 
