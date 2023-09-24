@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./CommentSection.scss";
 
 import {
@@ -10,10 +10,12 @@ import {
 import { CommentProps } from "../../types";
 import Comment from "../Comment/Comment";
 import CreateComment from "../CreateComment/CreateComment";
+import { UserContext } from "../../context/UserContext";
 
 const CommentSection = () => {
   const [comments, setComments] = useState<CommentProps[]>([]);
   const [activeComment, setActiveComment] = useState<CommentProps | null>();
+  const { username } = useContext(UserContext);
 
   const rootComments = comments
     .filter(
@@ -38,7 +40,7 @@ const CommentSection = () => {
 
   const addComment = (text: string, parentId?: string) => {
     console.log("Add comment!", text, parentId);
-    createComment(text, parentId).then((comment) => {
+    createComment(username, text, parentId).then((comment) => {
       setComments([comment, ...comments]);
     });
     setActiveComment(null);

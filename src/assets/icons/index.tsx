@@ -1,6 +1,7 @@
 import { AiOutlinePlus, AiOutlineClose } from "react-icons/ai";
 import { PiPaperPlaneTilt } from "react-icons/pi";
 import { IconContext } from "react-icons";
+import { FiLogIn } from "react-icons/fi";
 
 import { motion } from "framer-motion";
 
@@ -41,5 +42,13 @@ export const closeIcon = (
     >
       <AiOutlineClose />
     </motion.div>
+  </IconContext.Provider>
+);
+
+export const loginIcon = (
+  <IconContext.Provider
+    value={{ size: "20", style: { backgroundColor: "inherit" } }}
+  >
+    <FiLogIn />
   </IconContext.Provider>
 );

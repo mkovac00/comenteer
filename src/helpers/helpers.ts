@@ -5,12 +5,16 @@ export const fetchComments = async () => {
   return commentsJson;
 };
 
-export const createComment = async (text: string, parentId?: string) => {
+export const createComment = async (
+  username: string,
+  text: string,
+  parentId?: string
+) => {
   return {
     id: (Math.floor(Math.random() * (10000 - 1)) + 1).toString(),
     parentId: parentId,
     author: {
-      name: "Mario Kovač",
+      name: username,
       picture:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Aismallard_profile_picture.jpg/640px-Aismallard_profile_picture.jpg",
     },
