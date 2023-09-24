@@ -1,12 +1,70 @@
 @import "../assets/styles/variables";
 
 .login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $gray-color;
+  width: 50%;
+  margin-left: calc(25% - 20px);
+  border-radius: $border-radius-primary;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  @media only screen and (max-width: $mobile-threshold-width) {
+    background-color: inherit;
+    width: calc(100% - 12px);
+    margin: 0;
+    padding: 0;
+  }
+
   .login-page__title {
+    background-color: inherit;
+    color: $primary-color;
+    text-align: center;
+
+    @media only screen and (max-width: $mobile-threshold-width) {
+      font-size: $font-size-regular;
+      color: $gray-color;
+    }
   }
 
   .login-page__info {
+    background-color: inherit;
+    color: $primary-color;
+    text-align: center;
+
+    @media only screen and (max-width: $mobile-threshold-width) {
+      font-size: $font-size-regular;
+      color: $gray-color;
+    }
   }
 
   .login-page__input {
+    height: 40px;
+    border-radius: $border-radius-primary;
+    color: $dark-color;
+    font-size: $font-size-regular;
+    background-color: inherit;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 20px;
+    background-color: $primary-color;
+    border: none;
+
+    @media only screen and (max-width: $mobile-threshold-width) {
+      font-size: $font-size-small;
+      width: 60%;
+      border: 2px solid $gray-color;
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid $secondary-color;
+      color: $dark-color;
+    }
   }
 }

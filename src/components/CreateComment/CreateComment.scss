@@ -18,7 +18,7 @@
 
 .create-comment-popup {
   position: fixed;
-  width: 90%;
+  width: calc(90% - 6px);
   bottom: 3vh;
   left: 5%;
   display: flex;
@@ -33,6 +33,7 @@
   @media only screen and (max-width: $mobile-threshold-width) {
     bottom: 6px;
     left: 6px;
+    width: calc(90% + 12px);
   }
 
   .create-comment-popup__group {
