@@ -26,6 +26,12 @@ const Start = () => {
         className="login-page__input"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            handleUsernameChange();
+          }
+        }}
       ></input>
       <Button onClick={handleUsernameChange} text="Login" icon={loginIcon} />
     </div>
