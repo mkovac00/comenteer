@@ -2,6 +2,7 @@ import { CommentProps } from "../../types";
 import "./Comment.scss";
 
 import { motion } from "framer-motion";
+import Linkify from "linkify-react";
 
 import { formatTime } from "../../helpers/helpers";
 
@@ -24,7 +25,9 @@ const Comment = (props: CommentProps) => {
         <div className="comment-info">
           <div className="comment-info__main">
             <h3 className="comment-info__name">{props.author.name}</h3>
-            <p className="comment-info__content">{props.text}</p>
+            <Linkify options={{ target: "_blank" }}>
+              <p className="comment-info__content">{props.text}</p>
+            </Linkify>
           </div>
           <div className="comment-info__metadata">
             <p className="comment-info__timestamp">
