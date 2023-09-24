@@ -16,7 +16,7 @@ export const createComment = async (
     author: {
       name: username,
       picture:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Aismallard_profile_picture.jpg/640px-Aismallard_profile_picture.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Rockhopper_Penguin_Couple_%2815225200663%29.jpg/640px-Rockhopper_Penguin_Couple_%2815225200663%29.jpg",
     },
     text: text,
     timestamp: new Date().getTime(),
