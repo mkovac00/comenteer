@@ -1,11 +1,18 @@
 import { CommentProps } from "../../types";
 import "./Comment.scss";
 
+import { motion } from "framer-motion";
+
 import { formatTime } from "../../helpers/helpers";
 
 const Comment = (props: CommentProps) => {
   return (
-    <div className="comment-container">
+    <motion.div
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ type: "spring", duration: 0.3 }}
+      className="comment-container"
+    >
       <div className="comment-wrapper">
         <div className="comment-avatar__wrapper">
           <img
@@ -58,7 +65,7 @@ const Comment = (props: CommentProps) => {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
