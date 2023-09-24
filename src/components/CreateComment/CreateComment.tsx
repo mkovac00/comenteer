@@ -8,7 +8,7 @@ import { sendIcon } from "../../assets/icons";
 import { closeIcon } from "../../assets/icons";
 
 import Button from "../Button/Button";
-import { CommentProps, CreateCommentProps } from "../../types";
+import { CommentProps, CreateCommentProps } from "../../interfaces";
 
 const CreateComment = (props: CreateCommentProps) => {
   const [text, setText] = useState("");
@@ -30,7 +30,6 @@ const CreateComment = (props: CreateCommentProps) => {
     }
 
     if (isReplyingState && isReplyingState != null) {
-      console.log(isReplyingState);
       if (
         isReplyingState.parentId &&
         isReplyingState.parentId != undefined &&

@@ -1,4 +1,4 @@
-import { CommentProps } from "../../types";
+import { CommentProps } from "../../interfaces";
 import "./Comment.scss";
 
 import { motion } from "framer-motion";

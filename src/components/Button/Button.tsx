@@ -1,6 +1,6 @@
 import "./Button.scss";
 
-import { ButtonProps } from "../../types";
+import { ButtonProps } from "../../interfaces";
 
 const Button = (props: ButtonProps) => {
   return (

@@ -7,7 +7,7 @@ import {
   groupCommentsByDate,
   convertDateFormat,
 } from "../../helpers/helpers";
-import { CommentProps } from "../../types";
+import { CommentProps } from "../../interfaces";
 import Comment from "../Comment/Comment";
 import CreateComment from "../CreateComment/CreateComment";
 import { UserContext } from "../../context/UserContext";
@@ -39,12 +39,10 @@ const CommentSection = () => {
   };
 
   const addComment = (text: string, parentId?: string) => {
-    console.log("Add comment!", text, parentId);
     createComment(username, text, parentId).then((comment) => {
       setComments([comment, ...comments]);
     });
     setActiveComment(null);
-    console.log(comments);
   };
 
   useEffect(() => {

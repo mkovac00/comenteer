@@ -23,11 +23,11 @@ Components directory holds different components used throughout the application.
 Context directory holds the UserContext file that was used so that at the start of the application, the user can choose their own username, and that username will then be stored inside of React Context so it can be used later in the application.  
 Helpers directory holds different methods that were used in the application.  
 Pages directory holds different pages that render inside of the application.  
-Types directory holds all interfaces that were used for props inside of the application.
+Interfaces directory holds all interfaces that were used for props inside of the application.
 
 # How to check out the project
 
-You can visit the project at: [Comenteer](LINK!)
+You can visit the project at: [Comenteer](https://stunning-heliotrope-d7ca81.netlify.app)
 
 # Status
 

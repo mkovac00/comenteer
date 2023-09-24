@@ -1,5 +1,5 @@
 import commentsJson from "../assets/data/comments.json";
-import { CommentProps } from "../types";
+import { CommentProps } from "../interfaces";
 
 export const fetchComments = async () => {
   return commentsJson;
