@@ -114,7 +114,7 @@ const CreateComment = (props: CreateCommentProps) => {
                   placeholder="Replying..."
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                  className="create-comment-popup__input"
+                  className="create-comment-popup__input-reply"
                   autoFocus
                   onKeyDown={(e) => {
                     if (e.key === "Enter") {

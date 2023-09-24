@@ -66,14 +66,15 @@
       }
     }
 
-    .create-comment-popup__input {
-      width: 60%;
+    .create-comment-popup__input-reply {
+      width: 100%;
       height: 100%;
       border: none;
       color: $dark-color;
       font-size: $font-size-regular;
       background-color: inherit;
       padding-left: 8px;
+      flex-shrink: 0;
 
       @media only screen and (max-width: $mobile-threshold-width) {
         font-size: $font-size-small;
