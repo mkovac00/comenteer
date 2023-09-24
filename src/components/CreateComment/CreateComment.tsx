@@ -126,7 +126,7 @@ const CreateComment = (props: CreateCommentProps) => {
             )}
             {!isReplyingState && (
               <input
-                placeholder="Start a chat.. or don't?"
+                placeholder="Start a chat.. don't be shy!"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 className="create-comment-popup__input"
